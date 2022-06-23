@@ -7,23 +7,40 @@ package demo;
  * 
  */
 public class Singleton {
-	
-	public final static Singleton INSTANCE;
-	
+
+	private static Singleton INSTANCE;
+	private static Object lock = new Object();
 
 	// Eagerly loaded singleton - load when the Classloader starts (pre-main)
-	static { // static initializer / block
-		INSTANCE = new Singleton();
-	}
+	// static initializer / block
+	/*
+	 * static { INSTANCE = new Singleton(); }
+	 */
+	// Ctrl+Shift+/ comment // Ctrl+Shift+\ uncomment
 
 	// no one can call the constructor directly
 	private Singleton() {
+
+	}
+
+	// Lazy loaded singleton (flawed)
+	public static Singleton getInstance() {
 		
+		
+		synchronized (lock) {
+			if(INSTANCE == null) {
+				INSTANCE = new Singleton();
+			}
+		}
+		
+		
+		
+		return INSTANCE;
 	}
 	
-	
-	// Lazy loaded singleton
-	
-	
-	
 }
+
+
+
+
+

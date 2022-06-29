@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.Set;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.skillstorm.jdbc.ArtistDAO;
@@ -23,6 +24,30 @@ public class ArtistDAOTest {
 			dao = new ArtistDAO();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void update() {
+		try {
+			dao.update(new Artist(60, "Santana without Dave Matthew"));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	@Ignore // skip this test (hacky)
+	public void delete() {
+		try {
+			boolean deleted = dao.delete(276);
+			System.out.println(deleted);
+			assertTrue(deleted);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			fail();
 		}
 	}
 	
@@ -53,8 +78,8 @@ public class ArtistDAOTest {
 	@Test
 	public void create() {
 		try {
-			boolean success = dao.create(new Artist("The JUnit Marching Band"));
-			assertEquals(true, success);
+			Artist object = dao.create(new Artist("The Artist Formerly Known as Generated Key"));
+			System.out.println(object);
 		}catch(SQLException e) {
 			e.printStackTrace();
 			fail();

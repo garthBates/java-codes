@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Hello World</title>
+        <!-- favicon, SEO -->
+        <meta />
+        <style>
+            /*  CSS (a bit better than in-line styling) */
+
+        </style>
+        <link rel="stylesheet" href="styles.css" /> <!--  self-closing tag (HTML5 you don't need that / )-->
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    </head>
+    <!-- HTML XHTML XML HTML5 -->
+    <body class="container">
+        <h1>h1</h1> <!-- screen readers (semantic web tags) 508 compliance ADA -->
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        
+        <!-- element - div (noun)
+            attribute - style (adjective)
+            CSS - cascading stylesheets (pretty)
+        -->
+        <div class="row">
+
+            <section class="col col-lg-2" style="background-color: blue;">
+                Section 1
+            </section>
+            <div class="col col-lg-10" style="background-color: green;">
+                <a href="other.html">DIV 2</a> <!-- anchor -->
+            </div>
+
+        </div>
+
+        <span style="background-color: crimson;">
+            Span 1
+        </span>
+        <!-- in-line styling : not cohesive (no single responsibility)-->
+        <span style="background-color: deepskyblue;">
+            Span 2
+        </span>
+
+        <!-- ordered list -->
+        <ul>
+            <!-- list items  -->
+            <!-- class attribute: identify a group of elements to be styled similarly  -->
+            <li id="eggs" class="grocery">Eggs</li>
+            <li class="grocery">Milk</li>
+            <li class="grocery">Bread</li>
+        </ul>
+        
+        <ol>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+
+        <table class="table table-striped">
+            <thead> <!-- section of the table -->
+                <!-- table row /table header (cell) -->
+                <tr> <th>Character</th>  <th>HP</th> </tr>
+            </thead>
+            <tbody>
+                <!-- table row / table data (cell) -->
+                <tr> <td>Gohan</td> <td>1000</td> </tr>
+                <tr> <td>Vegeta</td> <td>1500</td> </tr>
+                <tr> <td>Goku</td> <td>2000</td> </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+
+
+
+        <!-- paragraph -->
+        <p>Lorem ipsum &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            dolor sit amet, consectetur adipiscing elit, 
+        
+            
+            
+            sed do eiusmod tempor incididunt ut labore et 
+            
+            dolore magna aliqua. Ut enim ad minim veniam, quis 
+            
+            nostrud exercitation               ullamco laboris nisi ut 
+            aliquip ex ea commodo consequat. Duis aute irure 
+            dolor in reprehenderit in 
+            
+            
+            voluptate velit esse 
+            cillum dolore eu fugiat nulla pariatur. Excepteur 
+            sint occaecat cupidatat non proident, sunt in culpa 
+            
+            qui officia deserunt mollit anim id est laborum.</p>
+    
+            <pickle>My Pickle tag</pickle><pickle>My Pickle tag</pickle>
+            <pickle>My Pickle tag</pickle><pickle>My Pickle tag</pickle>
+    </body>
+    
+</html>

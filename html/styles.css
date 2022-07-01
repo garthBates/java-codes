@@ -1,0 +1,21 @@
+/* external stylesheet (best practice) 
+    can be shared among many HTML pages - (consistent look-and-feel)
+*/
+
+/* element selector : all <li> tag */
+li {
+    color: blue;
+}
+
+/* class selector : styles only by class="grocery" 
+    overwrites element styles
+*/ 
+.grocery {
+    color: orange;
+    background-color: black;
+}
+
+/* id selector : styles a single element id="eggs" */
+#eggs {
+    color: white;
+}

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 // Map a URL to the Servlet ('listening' for requests to that URL)
 //   WEB-INF/web.xml  (deployment descriptor) telling Tomcat all about your Java app
 // WEB-INF/web.xml replaced by @WebServlet (and others)
-@WebServlet(urlPatterns = "/my-servlet") // Tomcat container will forward all HTTP requests with url /my-servlet
+//@WebServlet(urlPatterns = "/my-servlet") // Tomcat container will forward all HTTP requests with url /my-servlet
 public class HelloServlet extends HttpServlet { // IS-A servlet
 
 	// Http Request

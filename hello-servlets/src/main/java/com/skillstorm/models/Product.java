@@ -1,7 +1,9 @@
 package com.skillstorm.models;
 
+import java.io.Serializable;
+
 // model
-public class Product {
+public class Product implements Serializable { // converts a Java object to byte[] 
 
 	private int id;
 	private String name;

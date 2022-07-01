@@ -32,8 +32,8 @@ public class HelloServlet extends HttpServlet { // IS-A servlet
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println(req.getParameter("pickle"));
-		resp.sendRedirect("success.html"); // directs client browser to another page
-		//req.getRequestDispatcher("success.html").forward(req, resp); // forwards server-side
+		//resp.sendRedirect("success.html"); // directs client browser to another page
+		req.getRequestDispatcher("success.html").forward(req, resp); // forwards server-side
 	}
 
 	// PUT - update

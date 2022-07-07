@@ -73,3 +73,44 @@ const printXThenAddTwoNums = (x, y) => {
 }
 
 console.log(printXThenAddTwoNums(5, 6));
+
+
+// Object Destructuring
+// This allows us to extract certain properties from an object
+
+const sally = {
+    fullName: {
+        firstName: 'Sally',
+        lastName: 'Smith'
+    },
+    // age: 27,
+    favColor: 'Red',
+    hobbies: ['Skiing', 'Cooking', 'Hiking', 'Surfing'],
+    favFood: 'Lasagna'
+}
+
+// Destructuring properties is like defining a new variable
+// Instead of this
+let sallyAge = sally.age;
+
+// We can do this
+let {age, fullName, hobbies} = sally;
+console.log(age, fullName, hobbies);
+
+// Alternatively, you can use it to expect certain parameters in a function call
+// This is also gets around the ordering of the items in a call
+const printPerson = ({age=20, fullName, ...props}) => {
+    console.log(fullName.firstName + ' is ' + age + ' years old');
+    console.log(props);
+}
+
+printPerson(sally);
+
+// Array Destructuring
+// Array destructure order DOES matter
+
+const numbers = [67, 234, -235, 6];
+
+const [num1, num2] = numbers;
+
+console.log(num1, num2);

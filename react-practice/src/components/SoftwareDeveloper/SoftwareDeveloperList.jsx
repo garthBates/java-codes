@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
+import ThemeContext from '../../contexts/ThemeContext';
 import axios from 'axios';
 import { SoftwareDeveloper } from './SoftwareDeveloper';
 
@@ -20,6 +21,8 @@ export const SoftwareDeveloperList = () => {
      * 
      * I can also use the ref to refer to a native HTML element (similar to document.getElementById)
      */
+
+    const theme = useContext(ThemeContext);
 
     useEffect(() => {
         axios.get('https://my-json-server.typicode.com/skillstorm-walsh/employees-v1/employees')
@@ -52,7 +55,7 @@ export const SoftwareDeveloperList = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <table>
+            <table style={theme}>
                 <thead>
                     <tr>
                         <th>Name</th>

@@ -25,7 +25,7 @@ export const SoftwareDeveloperList = () => {
     const theme = useContext(ThemeContext);
 
     useEffect(() => {
-        axios.get('https://my-json-server.typicode.com/skillstorm-walsh/employees-v1/employees')
+        axios.get(`${process.env.REACT_APP_HOST_URI}/skillstorm-walsh/employees-v1/employees`)
             .then(res => setDevs(res.data)); // sets my devs state to be that array of devs
     }, []); // Be sure this is an empty array
     

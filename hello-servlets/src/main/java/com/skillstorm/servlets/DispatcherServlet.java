@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * 
  */
 // every URL	// EAGER loading 
-@WebServlet(urlPatterns = "/*", loadOnStartup = 1)
+//@WebServlet(urlPatterns = "/*", loadOnStartup = 1)
 public class DispatcherServlet extends HttpServlet {
 
 	@Override

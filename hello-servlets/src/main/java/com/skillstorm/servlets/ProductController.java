@@ -15,7 +15,7 @@ import com.skillstorm.data.FakeProductDAO;
 import com.skillstorm.models.Product;
 
 // Controller - glues the model to the view
-//@WebServlet(urlPatterns = "/products")
+@WebServlet(urlPatterns = "/products")
 public class ProductController extends HttpServlet {
 	
 	@Override

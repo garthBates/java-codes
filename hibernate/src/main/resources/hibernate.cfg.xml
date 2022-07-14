@@ -21,6 +21,8 @@
 
 		<!-- entity mappings -->
 		<mapping class="com.skillstorm.beans.Artist" />
-
+		<mapping class="com.skillstorm.beans.Album" />
+		<mapping class="com.skillstorm.beans.Track" />
+		
 	</session-factory>
 </hibernate-configuration>

@@ -1,10 +1,14 @@
 package com.skillstorm.beans;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity // manage this entity (keep the mapping in memory)
@@ -18,6 +22,10 @@ public class Artist {
 	
 	@Column(name="Name")
 	private String name;
+	
+	// fetchType (LAZY, EAGER) - query for an artist, will I get the associated albums? EAGER yes, LAZY join
+	@OneToMany(mappedBy = "artist") // owner is the other field
+	private Set<Album> albums; // the other side (inverse)
 
 	public Artist() {
 		super();
@@ -49,6 +57,14 @@ public class Artist {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Set<Album> getAlbums() {
+		return albums;
+	}
+
+	public void setAlbums(Set<Album> albums) {
+		this.albums = albums;
 	}
 
 	@Override
